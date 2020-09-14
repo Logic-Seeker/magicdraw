@@ -10,6 +10,7 @@ import main.java.com.sbevision.nomagic.service.AttachService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 
 public class AttachAction extends MDAction {
@@ -25,36 +26,37 @@ public class AttachAction extends MDAction {
   @Override
   public void actionPerformed(ActionEvent e) {
     project = Application.getInstance().getProject();
-    //    if (project == null) {
-    //      String message = "Cannot load to 'Digital Thread' no project is open";
-    //      logger.error(message);
-    //      JOptionPane.showMessageDialog(null, message);
-    //      return;
-    //    }
+        if (project == null) {
+          String message = "Cannot load to 'Digital Thread' no project is open";
+          logger.error(message);
+          JOptionPane.showMessageDialog(null, message);
+          return;
+        }
+
+        attachService.execute(true);
+
+    //        Package rootPackage = (Package) project.getPrimaryModel();
+    //        Package digitalThread = createPackageIfAbsent(Environment.DIGITAL_THREAD,
+    // rootPackage);
+    //        Profile profile = StereotypesHelper.getProfile(project,
+    //     Environment.DIGITAL_THREAD_PROFILE);
+    //        if (profile == null) {
+    //          profile = project.getElementsFactory().createProfileInstance();
+    //          profile.setName(Environment.DIGITAL_THREAD_PROFILE);
+    //          profile.setOwner(digitalThread);
     //
-    //    attachService.execute(true);
-    //
-    //    Package rootPackage = (Package) project.getPrimaryModel();
-    //    Package digitalThread = createPackageIfAbsent(Environment.DIGITAL_THREAD, rootPackage);
-    //    Profile profile = StereotypesHelper.getProfile(project,
-    // Environment.DIGITAL_THREAD_PROFILE);
-    //    if (profile == null) {
-    //      profile = project.getElementsFactory().createProfileInstance();
-    //      profile.setName(Environment.DIGITAL_THREAD_PROFILE);
-    //      profile.setOwner(digitalThread);
-    //
-    //      // get a metaclass "Class"
-    //      com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class metaClass =
-    // StereotypesHelper.getMetaClassByName(project, "Element");
-    //      // create a stereotype, stereotypes will be applicable to classes
-    //      Stereotype stereotype = StereotypesHelper.createStereotype(profile,
-    // Environment.DIGITAL_THREAD_STEREOTYPE, Arrays.asList(metaClass));
-    //      // create a tag definition
-    //      Property property = project.getElementsFactory().createPropertyInstance();
-    //      // a tag name
-    //      property.setName(Environment.SUBSCRIPTION_FQN);
-    //      stereotype.getAttribute().add(property);
-    //    }
+    //          // get a metaclass "Class"
+    //          com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class metaClass =
+    //     StereotypesHelper.getMetaClassByName(project, "Element");
+    //          // create a stereotype, stereotypes will be applicable to classes
+    //          Stereotype stereotype = StereotypesHelper.createStereotype(profile,
+    //     Environment.DIGITAL_THREAD_STEREOTYPE, Arrays.asList(metaClass));
+    //          // create a tag definition
+    //          Property property = project.getElementsFactory().createPropertyInstance();
+    //          // a tag name
+    //          property.setName(Environment.SUBSCRIPTION_FQN);
+    //          stereotype.getAttribute().add(property);
+    //        }
   }
 
   private Package createPackageIfAbsent(String digital_thread, Package rootPackage) {

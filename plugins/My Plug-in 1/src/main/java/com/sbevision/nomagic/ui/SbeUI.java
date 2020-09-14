@@ -1,11 +1,11 @@
 package main.java.com.sbevision.nomagic.ui;
 
-//import com.teamdev.jxbrowser.browser.Browser;
-//import com.teamdev.jxbrowser.engine.Engine;
-//import com.teamdev.jxbrowser.engine.EngineOptions;
-//import com.teamdev.jxbrowser.engine.PasswordStore;
-//import com.teamdev.jxbrowser.engine.RenderingMode;
-//import com.teamdev.jxbrowser.view.swing.BrowserView;
+// import com.teamdev.jxbrowser.browser.Browser;
+// import com.teamdev.jxbrowser.engine.Engine;
+// import com.teamdev.jxbrowser.engine.EngineOptions;
+// import com.teamdev.jxbrowser.engine.PasswordStore;
+// import com.teamdev.jxbrowser.engine.RenderingMode;
+// import com.teamdev.jxbrowser.view.swing.BrowserView;
 
 import com.teamdev.jxbrowser.browser.Browser;
 import com.teamdev.jxbrowser.engine.Engine;
@@ -28,12 +28,15 @@ public class SbeUI {
   private Browser browser;
   private BrowserView browserView;
 
-  /**
-   * Loads initial browser engine and frame
-   */
+  /** Loads initial browser engine and frame */
   public SbeUI() {
     // Trail license
-    EngineOptions options = EngineOptions.newBuilder(RenderingMode.OFF_SCREEN).licenseKey(Environment.JX_BROWSER_LICENSE).passwordStore(PasswordStore.GNOME_KEYRING).userDataDir(Utils.getBrowserDataPath()).build();
+    EngineOptions options =
+        EngineOptions.newBuilder(RenderingMode.OFF_SCREEN)
+            .licenseKey(Environment.JX_BROWSER_LICENSE)
+            .passwordStore(PasswordStore.GNOME_KEYRING)
+            .userDataDir(Utils.getBrowserDataPath())
+            .build();
     engine = Engine.newInstance(options);
     browser = engine.newBrowser();
     browserView = BrowserView.newInstance(browser);
@@ -43,16 +46,17 @@ public class SbeUI {
   /**
    * Creates UI for webview
    *
-   * @param url   item sbe url to load in iframe
+   * @param url item sbe url to load in iframe
    * @param label item name
    */
   private void createContent(String url, String label) {
-    frame.addWindowListener(new WindowAdapter() {
-      @Override
-      public void windowClosing(WindowEvent e) {
-        close();
-      }
-    });
+    frame.addWindowListener(
+        new WindowAdapter() {
+          @Override
+          public void windowClosing(WindowEvent e) {
+            close();
+          }
+        });
     frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
     //
     frame.setTitle("Digital Thread");
@@ -60,8 +64,7 @@ public class SbeUI {
 
     JButton okButton = new JButton();
     okButton.setSize(100, 100);
-    okButton.setText("OK");
-    okButton.setForeground(Color.white);
+    okButton.setText("Sink-In");
     okButton.setBackground(new Color(66, 135, 245));
     okButton.addActionListener(e -> okButtonClick());
 
@@ -79,24 +82,19 @@ public class SbeUI {
     frame.setVisible(true);
   }
 
-  private void okButtonClick() {
-//    logger.debug("Okay button click");
-    // todo: connect to magicdraw
-  }
+  private void okButtonClick() {}
 
   /**
    * staring point of webview
    *
-   * @param url   item sbe url to load in webview
+   * @param url item sbe url to load in webview
    * @param label item name
    */
   public void run(String url, String label) {
     createContent(url, label);
   }
 
-  /**
-   * Closing frames and browser
-   */
+  /** Closing frames and browser */
   public void close() {
     frame.dispose();
     browser.close();

@@ -1,7 +1,6 @@
 package main.java;
 
 import com.nomagic.magicdraw.actions.ActionsConfiguratorsManager;
-import com.nomagic.magicdraw.core.Application;
 import com.nomagic.magicdraw.plugins.Plugin;
 import com.nomagic.magicdraw.uml.DiagramTypeConstants;
 import main.java.com.sbevision.nomagic.ui.menu.ElementMenuPickConfig;

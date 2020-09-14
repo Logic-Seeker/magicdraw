@@ -181,12 +181,18 @@
       <CLASSES>
         <root url="jar://$MAGIC_DRAW_INSTALL_DIRECTORY$/lib/md_api.jar!/" />
         <root url="file://$MAGIC_DRAW_INSTALL_DIRECTORY$/lib" />
+        <root url="file://$MAVEN_REPOSITORY$/com/teamdev/jxbrowser/jxbrowser/7.1" />
+        <root url="file://$MAVEN_REPOSITORY$/com/teamdev/jxbrowser/jxbrowser-swing/7.1" />
+        <root url="file://$MAVEN_REPOSITORY$/com/teamdev/jxbrowser/jxbrowser-mac/7.1" />
       </CLASSES>
       <JAVADOC>
         <root url="jar://$MAGIC_DRAW_INSTALL_DIRECTORY$/openapi/docs/javadoc.zip!/" />
       </JAVADOC>
       <SOURCES />
       <jarDirectory url="file://$MAGIC_DRAW_INSTALL_DIRECTORY$/lib" recursive="true" />
+      <jarDirectory url="file://$MAVEN_REPOSITORY$/com/teamdev/jxbrowser/jxbrowser-mac/7.1" recursive="false" />
+      <jarDirectory url="file://$MAVEN_REPOSITORY$/com/teamdev/jxbrowser/jxbrowser-swing/7.1" recursive="false" />
+      <jarDirectory url="file://$MAVEN_REPOSITORY$/com/teamdev/jxbrowser/jxbrowser/7.1" recursive="false" />
     </library>
   </component>
 </project>

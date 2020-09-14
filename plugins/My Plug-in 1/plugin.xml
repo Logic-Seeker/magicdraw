@@ -11,6 +11,6 @@
     </requires>
 
     <runtime>
-        <library name="myplugin1.jar"/>
+        <library name="myplugin.jar"/>
     </runtime>
 </plugin>
