@@ -1,14 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b4533625-77c7-4bda-bbc5-af170d40f03c" name="Default Changelist" comment="" />
+    <list default="true" id="b4533625-77c7-4bda-bbc5-af170d40f03c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/c/0c91fa75e9486d87b0e0cb198f2ffadd28139316" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/8/b80250918d9d7eae112a4c090b47f2807cfa723d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/b/cbb71f3985136932adb9d67f7c8d96e3c4a09c09" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f047cbc3f8ee5b9975f8df73830dc8a3cb0e2688" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/MyPlugin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/SBEMagicdrawPlugin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/msg/enums/Requirements.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/msg/enums/TopLevelStereotypes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/plugin/CameoAPI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/plugin/ExternalItemConvertor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/plugin/MagicdrawHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/repository/ConsumerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/repository/SubscriptionThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/service/AttachService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/service/PublishingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/service/SubscribeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/service/TeamworkCloudService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/ui/SbeUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/ui/menu/AttachAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/ui/menu/ElementMenuPickConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/ui/menu/OpenURLAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/ui/menu/PublishAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/ui/menu/SBEMainMenuPick.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/ui/menu/SubscribeAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/utils/Environment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/utils/Identifier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/utils/ObserverMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/utils/TeamworkCloud.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/utils/Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/menu/AttachAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/menu/ElementMenuPickConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/menu/OpenURLAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/menu/SBEMainMenuPick.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagicDraw development.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/MagicDraw development.ipr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MagicDraw development.iws" beforeDir="false" afterPath="$PROJECT_DIR$/MagicDraw development.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/All Plugins/All Plugins.iml" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/All Plugins/All Plugins.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1hVsEVEyKgxZj338KJ8myOwPcyA" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -18,9 +60,30 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/plugins/My Plug-in 1" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.6505747" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager" selected="Application.MagicDraw with all plugins" />
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/plugins/My Plug-in 1" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.MagicDraw with all plugins">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -30,16 +93,54 @@
       <option name="presentableId" value="Default" />
       <updated>1600107483051</updated>
       <workItem from="1600107485270" duration="14000" />
+      <workItem from="1600113749053" duration="159000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="221" y="89" key="SettingsEditor" timestamp="1600107498390">
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600113892042">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1600107498390" />
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1600113892042" />
+    <state width="1398" height="231" key="GridCell.Tab.0.bottom" timestamp="1600113525457">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="231" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1600113525457" />
+    <state width="1398" height="231" key="GridCell.Tab.0.center" timestamp="1600113525457">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="231" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1600113525457" />
+    <state width="1398" height="231" key="GridCell.Tab.0.left" timestamp="1600113525457">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="231" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1600113525457" />
+    <state width="1398" height="231" key="GridCell.Tab.0.right" timestamp="1600113525457">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="231" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1600113525457" />
+    <state x="221" y="63" key="SettingsEditor" timestamp="1600113908465">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="221" y="63" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1600113908465" />
+    <state x="258" y="193" width="923" height="617" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1600113854121">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="258" y="193" width="923" height="617" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1440.900@0.0.1440.900" timestamp="1600113854121" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalStateException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
