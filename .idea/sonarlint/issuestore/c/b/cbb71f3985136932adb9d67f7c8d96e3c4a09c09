@@ -1,8 +1,10 @@
 
-E
-java:S1444"1Make this "public static initialized" field final(ñëñÀ
-l	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¥üÎX
-k
-java:S1104"WMake initialized a static final constant or non-public and provide accessors if needed.(ñëñÀ
-O
-java:S2696"6Make the enclosing method "static" or remove this set.(âËŠûÿÿÿÿ
+m
+java:S1104"WMake initialized a static final constant or non-public and provide accessors if needed.(ñëñÀ
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¥üÎX
+G
+java:S1444"1Make this "public static initialized" field final(ñëñÀ
+`
+java:S1128"CRemove this unused import 'com.nomagic.magicdraw.core.Application'.(¹–ëü8ÕŸåòÈ.
+X
+java:S2696"6Make the enclosing method "static" or remove this set.(âËŠûÿÿÿÿ8ÕŸåòÈ.

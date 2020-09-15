@@ -1,0 +1,8 @@
+
+N
+java:S1948"3Make "publishingService" transient or serializable.(³×Ä¿øÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(Ë®Ý«úÿÿÿÿ
+x
+java:S1104"]Make publishingService a static final constant or non-public and provide accessors if needed.(³×Ä¿øÿÿÿÿ
+F
+java:S2160"+Override the "equals" method in this class.(®žª®ûÿÿÿÿ

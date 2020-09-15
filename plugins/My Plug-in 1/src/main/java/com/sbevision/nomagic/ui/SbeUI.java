@@ -82,7 +82,10 @@ public class SbeUI {
     frame.setVisible(true);
   }
 
-  private void okButtonClick() {}
+  private void okButtonClick() {
+    //    logger.debug("Okay button click");
+    // todo: connect to magicdraw
+  }
 
   /**
    * staring point of webview

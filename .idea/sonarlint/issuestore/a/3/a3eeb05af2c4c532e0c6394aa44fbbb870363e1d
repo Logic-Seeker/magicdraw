@@ -1,0 +1,50 @@
+
+?
+java:S14816")Remove this unused "list" local variable.(·ğß¤
+S
+java:S1481>"8Remove this unused "callBehaviorAction3" local variable.(š±âûÿÿÿÿ
+U
+java:S1481D":Remove this unused "activityParameterNode" local variable.(‰ˆ†ùÿÿÿÿ
+V
+java:S1854Y";Remove this useless assignment to local variable "useCase".(·›…ıÿÿÿÿ
+P
+java:S1117f";Rename "project" which hides the field declared at line 28.(×ıù,
+V	java:S125O"<This block of commented-out lines of code should be removed.(Üûç’ÿÿÿÿÿ
+i
+java:S1104"SMake project a static final constant or non-public and provide accessors if needed.(’ùĞÔ
+b
+java:S1854>"GRemove this useless assignment to local variable "callBehaviorAction3".(š±âûÿÿÿÿ
+_
+java:S1854p"DRemove this useless assignment to local variable "originalElements".(ò©êÏùÿÿÿÿ
+G
+java:S1481Y",Remove this unused "useCase" local variable.(·›…ıÿÿÿÿ
+Q	java:S1251"<This block of commented-out lines of code should be removed.(ÈĞÌ©
+w
+java:S1488g"aImmediately return this expression instead of assigning it to the temporary variable "systemReq".(ï’®§
+W
+java:S1854b"<Remove this useless assignment to local variable "elements".(ë§è‹ıÿÿÿÿ
+Q	java:S1254"<This block of commented-out lines of code should be removed.(à¼Ä¡
+H
+java:S1481b"-Remove this unused "elements" local variable.(ë§è‹ıÿÿÿÿ
+P
+java:S1481p"5Remove this unused "originalElements" local variable.(ò©êÏùÿÿÿÿ
+N
+java:S1068"3Remove this unused "magicdrawHelper" private field.(¦ÔÂÅúÿÿÿÿ
+N
+java:S18546"8Remove this useless assignment to local variable "list".(·ğß¤
+j
+java:S11929"ODefine a constant instead of duplicating this literal "Digital Thread" 4 times.(ÔŠ½œúÿÿÿÿ
+V	java:S125-"<This block of commented-out lines of code should be removed.(‡Éûæşÿÿÿÿ
+Q
+java:S1117†";Rename "project" which hides the field declared at line 28.(×ıù,
+]
+java:S1854l"BRemove this useless assignment to local variable "resultSpecific".(ÆšĞúÿÿÿÿ
+K
+java:S1874_"5Remove this use of "getStereotype"; it is deprecated.(–µ¡§
+d
+java:S1854D"IRemove this useless assignment to local variable "activityParameterNode".(‰ˆ†ùÿÿÿÿ
+V	java:S125K"<This block of commented-out lines of code should be removed.(†ú¼¦øÿÿÿÿ
+E
+java:S1068"*Remove this unused "logger" private field.(ø€’¯üÿÿÿÿ
+{
+java:S1488‡"_Immediately return this expression instead of assigning it to the temporary variable "element".(Âòˆßûÿÿÿÿ

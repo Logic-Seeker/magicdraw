@@ -2,22 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4533625-77c7-4bda-bbc5-af170d40f03c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/MagicDraw development.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/MagicDraw development.ipr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/c/0c91fa75e9486d87b0e0cb198f2ffadd28139316" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/c/0c91fa75e9486d87b0e0cb198f2ffadd28139316" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/b/cbb71f3985136932adb9d67f7c8d96e3c4a09c09" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/b/cbb71f3985136932adb9d67f7c8d96e3c4a09c09" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MagicDraw development.iws" beforeDir="false" afterPath="$PROJECT_DIR$/MagicDraw development.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/My Plug-in 1/main/java/MyPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/My Plug-in 1/main/java/MyPlugin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/My Plug-in 1/main/java/com/sbevision/nomagic/service/AttachService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/My Plug-in 1/main/java/com/sbevision/nomagic/service/AttachService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/My Plug-in 1/main/java/com/sbevision/nomagic/ui/menu/AttachAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/My Plug-in 1/main/java/com/sbevision/nomagic/ui/menu/AttachAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/My Plug-in 1/myplugin1/MyPlugin1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/My Plug-in 1/myplugin1/MyPlugin1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/My Plug-in 1/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/MyPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/MyPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/service/AttachService.java" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/service/AttachService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/My Plug-in 1/main/java/com/sbevision/nomagic/ui/SbeUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/My Plug-in 1/main/java/com/sbevision/nomagic/ui/SbeUI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/ui/SbeUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/ui/SbeUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/ui/menu/AttachAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/ui/menu/AttachAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/menu/AttachAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/menu/ElementMenuPickConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/menu/OpenURLAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/menu/SBEMainMenuPick.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/My Plug-in 1/src/myplugin1/MyPlugin1.java" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/myplugin1/MyPlugin1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/ui/menu/SBEMainMenuPick.java" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/ui/menu/SBEMainMenuPick.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,19 +43,7 @@
       <recent name="$PROJECT_DIR$/plugins/My Plug-in 1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MagicDraw with all plugins">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
+  <component name="RunManager" selected="Application.MagicDraw with all plugins" />
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -74,7 +53,8 @@
       <option name="presentableId" value="Default" />
       <updated>1600107483051</updated>
       <workItem from="1600107485270" duration="14000" />
-      <workItem from="1600113749053" duration="4279000" />
+      <workItem from="1600113749053" duration="6409000" />
+      <workItem from="1600192733710" duration="158000" />
     </task>
     <servers />
   </component>
@@ -89,42 +69,42 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1600114023986" />
-    <state x="0" y="450" width="1440" height="450" key="#xdebugger.evaluate" timestamp="1600117290670">
+    <state x="0" y="450" width="1440" height="450" key="#xdebugger.evaluate" timestamp="1600128431244">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="0" y="450" width="1440" height="450" key="#xdebugger.evaluate/0.0.1440.900@0.0.1440.900" timestamp="1600117290670" />
-    <state width="1398" height="286" key="GridCell.Tab.0.bottom" timestamp="1600117316388">
+    <state x="0" y="450" width="1440" height="450" key="#xdebugger.evaluate/0.0.1440.900@0.0.1440.900" timestamp="1600128431244" />
+    <state width="1398" height="286" key="GridCell.Tab.0.bottom" timestamp="1600192645183">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1600117316388" />
-    <state width="1398" height="286" key="GridCell.Tab.0.center" timestamp="1600117316387">
+    <state width="1398" height="286" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1600192645183" />
+    <state width="1398" height="286" key="GridCell.Tab.0.center" timestamp="1600192645182">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1600117316387" />
-    <state width="1398" height="286" key="GridCell.Tab.0.left" timestamp="1600117316387">
+    <state width="1398" height="286" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1600192645182" />
+    <state width="1398" height="286" key="GridCell.Tab.0.left" timestamp="1600192645182">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1600117316387" />
-    <state width="1398" height="286" key="GridCell.Tab.0.right" timestamp="1600117316388">
+    <state width="1398" height="286" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1600192645182" />
+    <state width="1398" height="286" key="GridCell.Tab.0.right" timestamp="1600192645183">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1600117316388" />
-    <state width="1398" height="286" key="GridCell.Tab.1.bottom" timestamp="1600117408828">
+    <state width="1398" height="286" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1600192645183" />
+    <state width="1398" height="286" key="GridCell.Tab.1.bottom" timestamp="1600192645184">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1600117408828" />
-    <state width="1398" height="286" key="GridCell.Tab.1.center" timestamp="1600117408827">
+    <state width="1398" height="286" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1600192645184" />
+    <state width="1398" height="286" key="GridCell.Tab.1.center" timestamp="1600192645184">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1600117408827" />
-    <state width="1398" height="286" key="GridCell.Tab.1.left" timestamp="1600117408826">
+    <state width="1398" height="286" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1600192645184" />
+    <state width="1398" height="286" key="GridCell.Tab.1.left" timestamp="1600192645183">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1600117408826" />
-    <state width="1398" height="286" key="GridCell.Tab.1.right" timestamp="1600117408827">
+    <state width="1398" height="286" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1600192645183" />
+    <state width="1398" height="286" key="GridCell.Tab.1.right" timestamp="1600192645184">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="286" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1600117408827" />
+    <state width="1398" height="286" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1600192645184" />
     <state x="221" y="63" key="SettingsEditor" timestamp="1600117089023">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -133,20 +113,14 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="258" y="193" width="923" height="617" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1440.900@0.0.1440.900" timestamp="1600113854121" />
+    <state x="421" y="205" width="630" height="490" key="find.popup" timestamp="1600128447160">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="421" y="205" width="630" height="490" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1600128447160" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/service/AttachService.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/service/AttachService.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/ui/menu/PublishAction.java</url>
           <line>22</line>
@@ -163,29 +137,9 @@
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/service/AttachService.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/service/AttachService.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/ui/SbeUI.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/ui/SbeUI.java</url>
-          <line>81</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/ui/SbeUI.java</url>
-          <line>98</line>
-          <option name="timeStamp" value="20" />
+          <url>file://$PROJECT_DIR$/plugins/My Plug-in 1/src/main/java/com/sbevision/nomagic/ui/menu/AttachAction.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

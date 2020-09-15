@@ -1,0 +1,19 @@
+
+Q
+java:S1948"/Make "attachService" transient or serializable.(‘áÆœıÿÿÿÿ8ùòùñÈ.
+\
+java:S1144>":Remove this unused private "createPackageIfAbsent" method.(­­’şÿÿÿÿ8ëšïòÈ.
+A
+java:S2160"+Override the "equals" method in this class.(ªÛï
+D
+java:S1948")Make "project" transient or serializable.(Ø¿Òåıÿÿÿÿ
+]	java:S125*"<This block of commented-out lines of code should be removed.(êò‹¥ùÿÿÿÿ8ëšïòÈ.
+X	java:S1252"<This block of commented-out lines of code should be removed.(õâóº8ëšïòÈ.
+]	java:S1259"<This block of commented-out lines of code should be removed.(©„ùËşÿÿÿÿ8ëšïòÈ.
+]	java:S125&"<This block of commented-out lines of code should be removed.(ïÍ£úÿÿÿÿ8ëšïòÈ.
+]	java:S1257"<This block of commented-out lines of code should be removed.(‹×¡Úüÿÿÿÿ8ëšïòÈ.
+X	java:S1255"<This block of commented-out lines of code should be removed.(ı´8ëšïòÈ.
+{
+java:S1488D"`Immediately return this expression instead of assigning it to the temporary variable "aPackage".(ı‘Û¼ÿÿÿÿÿ
+k	java:S117>"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­­’şÿÿÿÿ
+X	java:S125("<This block of commented-out lines of code should be removed.(†²ÊÇ8ëšïòÈ.

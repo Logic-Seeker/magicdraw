@@ -9,52 +9,55 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class SBEMainMenuPick implements AMConfigurator {
-    private static final Logger logger = LoggerFactory.getLogger(SBEMainMenuPick.class);
+  private static final Logger logger = LoggerFactory.getLogger(SBEMainMenuPick.class);
 
-    @Override
-    public int getPriority() {
-//        return AMConfigurator.MEDIUM_PRIORITY;
-        return 69;
+  @Override
+  public int getPriority() {
+    //        return AMConfigurator.MEDIUM_PRIORITY;
+    return 69;
+  }
+
+  @Override
+  public void configure(ActionsManager mngr) {
+    logger.info("Adding Digital Thread main menu picks");
+
+    NMAction category = mngr.getActionFor("SBE_DIGITAL_THREAD");
+    if (category == null) {
+      category = new MDActionsCategory("SBE_DIGITAL_THREAD", "DigitalThread");
     }
 
-    @Override
-    public void configure(ActionsManager mngr) {
-        logger.info("Adding Digital Thread main menu picks");
+    ((ActionsCategory) category).setNested(true);
+    mngr.addCategory((ActionsCategory) category);
 
-        NMAction category = mngr.getActionFor("SBE_DIGITAL_THREAD");
-        if (category == null) {
-            category = new MDActionsCategory("SBE_DIGITAL_THREAD", "DigitalThread");
-        }
+    AttachAction attach = new AttachAction("SBE_ATTACH", "Attach");
+    category.addAction(attach);
 
-        ((ActionsCategory) category).setNested(true);
-        mngr.addCategory((ActionsCategory) category);
+    PublishAction publish = new PublishAction("SBE_PUBLISH", "Publish");
+    category.addAction(publish);
 
-        AttachAction attach = new AttachAction("SBE_ATTACH", "Attach");
-        category.addAction(attach);
+    OpenURLAction diff =
+        new OpenURLAction(OpenURLAction.UrlName.diff, "SBE_AUTHORITATIVE_DIFF", "Diff");
+    category.addAction(diff);
 
-        PublishAction publish = new PublishAction("SBE_PUBLISH", "Publish...");
-        category.addAction(publish);
+    //        SubscribeAction sync = new SubscribeAction("SBE_AUTHORITATIVE_REFRESH", "Refresh",
+    // PullType.AUTHORITATIVE);
+    //        category.addAction(sync);
 
-        OpenURLAction diff = new OpenURLAction(OpenURLAction.UrlName.diff, "SBE_AUTHORITATIVE_DIFF", "Diff...");
-        category.addAction(diff);
+    ActionsCategory subscriptionCategory =
+        new MDActionsCategory("SBE_SUBSCRIPTION", "Subscription");
+    subscriptionCategory.setNested(true);
+    category.addAction(subscriptionCategory);
 
-//        SubscribeAction sync = new SubscribeAction("SBE_AUTHORITATIVE_REFRESH", "Refresh", PullType.AUTHORITATIVE);
-//        category.addAction(sync);
+    OpenURLAction createSubscription =
+        new OpenURLAction(OpenURLAction.UrlName.subscribe, "SBE_CREATE_SUBSCRIPTION", "Create");
+    subscriptionCategory.addAction(createSubscription);
 
-        ActionsCategory subscriptionCategory = new MDActionsCategory("SBE_SUBSCRIPTION", "Subscription");
-        subscriptionCategory.setNested(true);
-        category.addAction(subscriptionCategory);
+    //        SubscribeAction refreshSubscription = new SubscribeAction("SBE_REFRESH_SUBSCRIPTION",
+    // "Refresh", PullType.SUBSCRIPTION);
+    //        subscriptionCategory.addAction(refreshSubscription);refreshSubscription
 
-        OpenURLAction createSubscription = new OpenURLAction(OpenURLAction.UrlName.subscribe, "SBE_CREATE_SUBSCRIPTION", "Create...");
-        subscriptionCategory.addAction(createSubscription);
-
-
-//        SubscribeAction refreshSubscription = new SubscribeAction("SBE_REFRESH_SUBSCRIPTION", "Refresh", PullType.SUBSCRIPTION);
-//        subscriptionCategory.addAction(refreshSubscription);refreshSubscription
-
-
-//        List<String> blankURLs = new ArrayList<>();
-//        OpenURLAction navigate = new OpenURLAction(blankURLs, "SBE_NAVIGATE", "Navigate...");
-//        category.addAction(navigate);
-    }
+    //        List<String> blankURLs = new ArrayList<>();
+    //        OpenURLAction navigate = new OpenURLAction(blankURLs, "SBE_NAVIGATE", "Navigate...");
+    //        category.addAction(navigate);
+  }
 }
