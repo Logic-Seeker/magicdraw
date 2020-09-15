@@ -5,6 +5,7 @@ import com.nomagic.actions.ActionsCategory;
 import com.nomagic.actions.ActionsManager;
 import com.nomagic.actions.NMAction;
 import com.nomagic.magicdraw.actions.MDActionsCategory;
+import com.sbevision.interchange.grpc.PullType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -35,26 +36,45 @@ public class SBEMainMenuPick implements AMConfigurator {
     PublishAction publish = new PublishAction("SBE_PUBLISH", "Publish");
     category.addAction(publish);
 
-    OpenURLAction diff =
-        new OpenURLAction(OpenURLAction.UrlName.diff, "SBE_AUTHORITATIVE_DIFF", "Diff");
-    category.addAction(diff);
+    ActionsCategory authoritativeCategory =
+        new MDActionsCategory("SBE_AUTHORITATIVE", "Authoritative");
+    authoritativeCategory.setNested(true);
+    category.addAction(authoritativeCategory);
 
-    //        SubscribeAction sync = new SubscribeAction("SBE_AUTHORITATIVE_REFRESH", "Refresh",
-    // PullType.AUTHORITATIVE);
-    //        category.addAction(sync);
+    RefreshAction sync =
+        new RefreshAction(
+            "SBE_AUTHORITATIVE_REFRESH", "Authoritative Refresh", PullType.AUTHORITATIVE);
+    authoritativeCategory.addAction(sync);
 
-    ActionsCategory subscriptionCategory =
-        new MDActionsCategory("SBE_SUBSCRIPTION", "Subscription");
+    UIAction diff =
+        new UIAction(
+            UIAction.UrlName.authoritatitve_diff,
+            "SBE_AUTHORITATIVE_DIFF",
+            "Authoritative Diff");
+    authoritativeCategory.addAction(diff);
+
+    ActionsCategory subscriptionCategory = new MDActionsCategory("SBE_SUBSCRIPTION", "Subscribed");
     subscriptionCategory.setNested(true);
     category.addAction(subscriptionCategory);
 
-    OpenURLAction createSubscription =
-        new OpenURLAction(OpenURLAction.UrlName.subscribe, "SBE_CREATE_SUBSCRIPTION", "Create");
+    UIAction createSubscription =
+        new UIAction(
+            UIAction.UrlName.subscribe,
+            "SBE_CREATE_SUBSCRIPTION",
+            "Subscription Create");
     subscriptionCategory.addAction(createSubscription);
 
-    //        SubscribeAction refreshSubscription = new SubscribeAction("SBE_REFRESH_SUBSCRIPTION",
-    // "Refresh", PullType.SUBSCRIPTION);
-    //        subscriptionCategory.addAction(refreshSubscription);refreshSubscription
+    RefreshAction refreshSubscription =
+        new RefreshAction(
+            "SBE_REFRESH_SUBSCRIPTION", "Subscription Refresh", PullType.SUBSCRIPTION);
+    subscriptionCategory.addAction(refreshSubscription);
+
+    UIAction subscriptionDiff =
+        new UIAction(
+            UIAction.UrlName.subscription_diff,
+            "SBE_SUBSCRIPTION_DIFF",
+            "Subscription Diff");
+    subscriptionCategory.addAction(subscriptionCategory);
 
     //        List<String> blankURLs = new ArrayList<>();
     //        OpenURLAction navigate = new OpenURLAction(blankURLs, "SBE_NAVIGATE", "Navigate...");

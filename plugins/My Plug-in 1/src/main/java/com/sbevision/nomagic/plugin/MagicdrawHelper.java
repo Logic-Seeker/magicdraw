@@ -29,17 +29,18 @@ package main.java.com.sbevision.nomagic.plugin;
 
 import com.nomagic.magicdraw.core.Application;
 import com.nomagic.magicdraw.core.Project;
+import com.nomagic.magicdraw.uml.Finder;
+import com.nomagic.uml2.ext.jmi.helpers.ModelHelper;
 import com.nomagic.uml2.ext.jmi.helpers.StereotypesHelper;
 import com.nomagic.uml2.ext.magicdraw.actions.mdbasicactions.CallBehaviorAction;
-import com.nomagic.uml2.ext.magicdraw.activities.mdbasicactivities.ActivityParameterNode;
 import com.nomagic.uml2.ext.magicdraw.activities.mdbasicactivities.ControlFlow;
 import com.nomagic.uml2.ext.magicdraw.activities.mdfundamentalactivities.Activity;
 import com.nomagic.uml2.ext.magicdraw.classes.mddependencies.Abstraction;
 import com.nomagic.uml2.ext.magicdraw.classes.mddependencies.Dependency;
 import com.nomagic.uml2.ext.magicdraw.classes.mddependencies.Realization;
-import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.*;
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class;
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Package;
+import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.*;
 import com.nomagic.uml2.ext.magicdraw.components.mdbasiccomponents.Component;
 import com.nomagic.uml2.ext.magicdraw.compositestructures.mdports.Port;
 import com.nomagic.uml2.ext.magicdraw.mdprofiles.Profile;
@@ -47,6 +48,8 @@ import com.nomagic.uml2.ext.magicdraw.mdprofiles.Stereotype;
 import com.nomagic.uml2.ext.magicdraw.mdusecases.Actor;
 import com.nomagic.uml2.ext.magicdraw.mdusecases.UseCase;
 import com.nomagic.uml2.impl.ElementsFactory;
+import com.sbevision.common.grpc.UnaryValueProto;
+import com.sbevision.common.grpc.ValueProto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -54,9 +57,6 @@ import java.util.Collection;
 
 import static com.nomagic.uml2.ext.jmi.helpers.CoreHelper.setClientElement;
 import static com.nomagic.uml2.ext.jmi.helpers.CoreHelper.setSupplierElement;
-
-// import com.sbevision.common.grpc.UnaryValueProto;
-// import com.sbevision.common.grpc.ValueProto;
 
 public class MagicdrawHelper {
   private static final Logger logger = LoggerFactory.getLogger(MagicdrawHelper.class);
@@ -99,36 +99,6 @@ public class MagicdrawHelper {
     return magicdrawHelper;
   }
 
-  public ActivityParameterNode createActivityParameterNode(String name, Element owner) {
-    ActivityParameterNode activityParameterNode =
-        elementsFactory.createActivityParameterNodeInstance();
-
-    activityParameterNode.setName(name);
-    activityParameterNode.setOwner(owner);
-    return activityParameterNode;
-  }
-
-  public Activity createActivity(String displayName, Element owner) {
-    setProject();
-    Activity activity = elementsFactory.createActivityInstance();
-    finishElement(activity, displayName, owner);
-    return activity;
-  }
-
-  public Stereotype createStereoType(String displayName, Element owner) {
-    setProject();
-    Stereotype stereotype = elementsFactory.createStereotypeInstance();
-    finishElement(stereotype, displayName, owner);
-    return stereotype;
-  }
-
-  public CallBehaviorAction createCallBehaviorAction(String name, Element owner) {
-    CallBehaviorAction callBehaviorAction = elementsFactory.createCallBehaviorActionInstance();
-    callBehaviorAction.setName(name);
-    callBehaviorAction.setOwner(owner);
-    return callBehaviorAction;
-  }
-
   /**
    * Create a class with a stereotype of "Block" from sysml
    *
@@ -144,29 +114,38 @@ public class MagicdrawHelper {
     return newBlock;
   }
 
-  public Class createRole(String name, Element owner) {
-
-    Class newBlock = createClass(name, owner);
-    sysmlProfile = StereotypesHelper.getProfile(project, "Ford MBSE Profile");
-    Stereotype role = StereotypesHelper.getStereotype(project, "Role", sysmlProfile);
-
-    StereotypesHelper.addStereotype(newBlock, role);
-    return newBlock;
+  public CallBehaviorAction createCallBehaviorAction(String name, Element owner) {
+    CallBehaviorAction callBehaviorAction = elementsFactory.createCallBehaviorActionInstance();
+    callBehaviorAction.setName(name);
+    callBehaviorAction.setOwner(owner);
+    return callBehaviorAction;
   }
 
   public Class createClass(String name, Element owner) {
-    setProject();
     Class newClass = elementsFactory.createClassInstance();
     finishElement(newClass, name, owner);
     return newClass;
   }
 
-  public UseCase createUseCase(String name, Element owner) {
-    setProject();
-    UseCase useCase = elementsFactory.createUseCaseInstance();
+  public Class createRole(String name, Element owner) {
 
-    finishElement(useCase, name, owner);
-    return useCase;
+    Class newBlock = createClass(name, owner);
+    Profile profile = StereotypesHelper.getProfile(project, "Ford MBSE Profile");
+    Stereotype role = StereotypesHelper.getStereotype(project, "Role", profile);
+
+    StereotypesHelper.addStereotype(newBlock, role);
+    return newBlock;
+  }
+
+  public Class createRole(String name, Element owner, String externalLifecycleId) {
+
+    Class newClass = createClass(name, owner);
+    newClass.setID(externalLifecycleId);
+    Profile profile = StereotypesHelper.getProfile(project, "Ford MBSE Profile");
+    Stereotype role = StereotypesHelper.getStereotype(project, "Role", profile);
+
+    StereotypesHelper.addStereotype(newClass, role);
+    return newClass;
   }
 
   public Class createClass(String name, Element owner, String externalLifecycleId) {
@@ -175,16 +154,16 @@ public class MagicdrawHelper {
     return newClass;
   }
 
+  public Package getPackageBasedOnQualifiedName(String qualifiedName) {
+    getProject();
+    Package systemReq = Finder.byQualifiedName().find(project, qualifiedName);
+    return systemReq;
+  }
+
   public Component createComponent(String name, Element owner) {
     Component comp = elementsFactory.createComponentInstance();
     finishElement(comp, name, owner);
     return comp;
-  }
-
-  public void applyStereotype(String name, Element element) {
-    sysmlProfile = StereotypesHelper.getProfile(project, "Ford MBSE Profile");
-    Stereotype stereotype = StereotypesHelper.getStereotype(project, name, sysmlProfile);
-    StereotypesHelper.addStereotype(element, stereotype);
   }
 
   public Constraint createConstraint(String name, Element owner, ValueSpecification spec) {
@@ -314,6 +293,20 @@ public class MagicdrawHelper {
     return newOp;
   }
 
+  public UseCase createUseCase(String name, Element owner) {
+    setProject();
+    UseCase useCase = elementsFactory.createUseCaseInstance();
+    finishElement(useCase, name, owner);
+    return useCase;
+  }
+
+  public UseCase createUseCase(String name, Element owner, String externalLifecycleId) {
+    setProject();
+    UseCase useCase = elementsFactory.createUseCaseInstance();
+    finishElement(useCase, name, externalLifecycleId, owner);
+    return useCase;
+  }
+
   public Port createPort(String name, Element owner) {
     logger.debug("Creating Port '{}' with owner '{}'", name, owner.getHumanName());
     Port newPort = elementsFactory.createPortInstance();
@@ -373,61 +366,61 @@ public class MagicdrawHelper {
     }
   }
 
-  //  public ValueProto getValue(ValueSpecification valueSpecification) {
-  //    Object attribute = ModelHelper.getValueSpecificationValue(valueSpecification);
-  //    Object result;
-  //    ValueProto.Builder valueProto = ValueProto.newBuilder();
-  //
-  //    if (attribute instanceof LiteralString) {
-  //      result = ((LiteralString) valueSpecification).getValue();
-  //      UnaryValueProto unaryValueProto =
-  //          UnaryValueProto.newBuilder().setStringValue(result.toString()).build();
-  //      valueProto.setUnaryValue(unaryValueProto).build();
-  //    } else if (attribute instanceof LiteralBoolean) {
-  //      result = ((LiteralBoolean) valueSpecification).isValue();
-  //      UnaryValueProto unaryValueProto =
-  //          UnaryValueProto.newBuilder().setBoolValue((boolean) result).build();
-  //      valueProto.setUnaryValue(unaryValueProto).build();
-  //    } else if (attribute instanceof LiteralInteger) {
-  //      result = ((LiteralInteger) valueSpecification).getValue();
-  //      UnaryValueProto unaryValueProto =
-  //          UnaryValueProto.newBuilder().setIntegerValue((int) result).build();
-  //      valueProto.setUnaryValue(unaryValueProto).build();
-  //    } else if (attribute instanceof LiteralReal) {
-  //      result = ((LiteralReal) valueSpecification).getValue();
-  //      UnaryValueProto unaryValueProto =
-  //          UnaryValueProto.newBuilder().setStringValue(result.toString()).build();
-  //      valueProto.setUnaryValue(unaryValueProto).build();
-  //    } else if (attribute instanceof LiteralUnlimitedNatural) {
-  //      result = ((LiteralUnlimitedNatural) valueSpecification).getValue();
-  //      UnaryValueProto unaryValueProto =
-  //          UnaryValueProto.newBuilder().setStringValue(result.toString()).build();
-  //      valueProto.setUnaryValue(unaryValueProto).build();
-  //    } else if (attribute instanceof EnumerationLiteral) {
-  //      EnumerationLiteral literal = (EnumerationLiteral) attribute;
-  //      result = literal.getName();
-  //      UnaryValueProto unaryValueProto =
-  //          UnaryValueProto.newBuilder().setStringValue(result.toString()).build();
-  //      valueProto.setUnaryValue(unaryValueProto).build();
-  //    } else if (attribute instanceof Class) {
-  //      Class literal = (Class) attribute;
-  //      result = literal.getHumanName();
-  //    } else if (attribute instanceof LiteralNull) {
-  //      // nothing to do here, result is already null
-  //    } else if (attribute instanceof Boolean) {
-  //      result = attribute.toString();
-  //      UnaryValueProto unaryValueProto =
-  //          UnaryValueProto.newBuilder().setBoolValue(Boolean.valueOf((String) result)).build();
-  //      valueProto.setUnaryValue(unaryValueProto).build();
-  //    } else {
-  //      result = attribute.toString();
-  //      UnaryValueProto unaryValueProto =
-  //          UnaryValueProto.newBuilder().setStringValue(result.toString()).build();
-  //      valueProto.setUnaryValue(unaryValueProto).build();
-  //    }
-  //
-  //    return valueProto.build();
-  //  }
+  public ValueProto getValue(ValueSpecification valueSpecification) {
+    Object attribute = ModelHelper.getValueSpecificationValue(valueSpecification);
+    Object result;
+    ValueProto.Builder valueProto = ValueProto.newBuilder();
+
+    if (attribute instanceof LiteralString) {
+      result = ((LiteralString) valueSpecification).getValue();
+      UnaryValueProto unaryValueProto =
+          UnaryValueProto.newBuilder().setStringValue(result.toString()).build();
+      valueProto.setUnaryValue(unaryValueProto).build();
+    } else if (attribute instanceof LiteralBoolean) {
+      result = ((LiteralBoolean) valueSpecification).isValue();
+      UnaryValueProto unaryValueProto =
+          UnaryValueProto.newBuilder().setBoolValue((boolean) result).build();
+      valueProto.setUnaryValue(unaryValueProto).build();
+    } else if (attribute instanceof LiteralInteger) {
+      result = ((LiteralInteger) valueSpecification).getValue();
+      UnaryValueProto unaryValueProto =
+          UnaryValueProto.newBuilder().setIntegerValue((int) result).build();
+      valueProto.setUnaryValue(unaryValueProto).build();
+    } else if (attribute instanceof LiteralReal) {
+      result = ((LiteralReal) valueSpecification).getValue();
+      UnaryValueProto unaryValueProto =
+          UnaryValueProto.newBuilder().setStringValue(result.toString()).build();
+      valueProto.setUnaryValue(unaryValueProto).build();
+    } else if (attribute instanceof LiteralUnlimitedNatural) {
+      result = ((LiteralUnlimitedNatural) valueSpecification).getValue();
+      UnaryValueProto unaryValueProto =
+          UnaryValueProto.newBuilder().setStringValue(result.toString()).build();
+      valueProto.setUnaryValue(unaryValueProto).build();
+    } else if (attribute instanceof EnumerationLiteral) {
+      EnumerationLiteral literal = (EnumerationLiteral) attribute;
+      result = literal.getName();
+      UnaryValueProto unaryValueProto =
+          UnaryValueProto.newBuilder().setStringValue(result.toString()).build();
+      valueProto.setUnaryValue(unaryValueProto).build();
+    } else if (attribute instanceof Class) {
+      Class literal = (Class) attribute;
+      result = literal.getHumanName();
+    } else if (attribute instanceof LiteralNull) {
+      // nothing to do here, result is already null
+    } else if (attribute instanceof Boolean) {
+      result = attribute.toString();
+      UnaryValueProto unaryValueProto =
+          UnaryValueProto.newBuilder().setBoolValue(Boolean.valueOf((String) result)).build();
+      valueProto.setUnaryValue(unaryValueProto).build();
+    } else {
+      result = attribute.toString();
+      UnaryValueProto unaryValueProto =
+          UnaryValueProto.newBuilder().setStringValue(result.toString()).build();
+      valueProto.setUnaryValue(unaryValueProto).build();
+    }
+
+    return valueProto.build();
+  }
 
   public void setValue(ValueSpecification attribute, Object value) {
 
@@ -532,7 +525,7 @@ public class MagicdrawHelper {
     for (Property property : properties) {
       ValueSpecification vs = property.getDefaultValue();
       if (vs != null && vs.getName().equals("Id")) {
-        //        id = getValue(vs).getUnaryValue().getStringValue();
+        id = getValue(vs).getUnaryValue().getStringValue();
       }
     }
 
@@ -595,6 +588,18 @@ public class MagicdrawHelper {
     setSupplierElement(dr, target);
   }
 
+  public Element createActivity(String displayName, Element owner) {
+    Activity activity = elementsFactory.createActivityInstance();
+    finishElement(activity, displayName, owner);
+    return activity;
+  }
+
+  public Element createActivity(String displayName, Element owner, String externalLifecycleId) {
+    Activity activity = elementsFactory.createActivityInstance();
+    finishElement(activity, displayName, externalLifecycleId, owner);
+    return activity;
+  }
+
   public void createControlFlow(
       CallBehaviorAction callBehaviorAction1,
       CallBehaviorAction callBehaviorAction2,
@@ -612,11 +617,4 @@ public class MagicdrawHelper {
     actor.setOwner(owner);
     return actor;
   }
-
-//  public Association createAssociation(String name,Element owner){
-//    Association association =elementsFactory.createAssociationInstance();
-//    association.setOwner(owner);
-//    association
-//
-//  }
 }

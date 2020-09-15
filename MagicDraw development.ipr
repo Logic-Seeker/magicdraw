@@ -184,15 +184,42 @@
         <root url="file://$MAVEN_REPOSITORY$/com/teamdev/jxbrowser/jxbrowser/7.1" />
         <root url="file://$MAVEN_REPOSITORY$/com/teamdev/jxbrowser/jxbrowser-swing/7.1" />
         <root url="file://$MAVEN_REPOSITORY$/com/teamdev/jxbrowser/jxbrowser-mac/7.1" />
+        <root url="file://$MAVEN_REPOSITORY$/io/grpc/grpc-api/1.27.2" />
+        <root url="file://$MAVEN_REPOSITORY$/io/grpc/grpc-netty/1.27.2" />
+        <root url="file://$MAVEN_REPOSITORY$/io/grpc/grpc-core/1.27.2" />
+        <root url="file://$MAVEN_REPOSITORY$/io/grpc/grpc-stub/1.27.2" />
+        <root url="file://$MAVEN_REPOSITORY$/com/sbevision/common-api/1.0.0-SNAPSHOT" />
+        <root url="file://$MAVEN_REPOSITORY$/com/nomagic/requirements-api/19.0.2" />
+        <root url="file://$MAVEN_REPOSITORY$/com/sbevision/interchange-api/1.1.2-SNAPSHOT" />
       </CLASSES>
       <JAVADOC>
         <root url="jar://$MAGIC_DRAW_INSTALL_DIRECTORY$/openapi/docs/javadoc.zip!/" />
       </JAVADOC>
-      <SOURCES />
+      <SOURCES>
+        <root url="file://$MAVEN_REPOSITORY$/io/grpc/grpc-api/1.27.2" />
+        <root url="file://$MAVEN_REPOSITORY$/io/grpc/grpc-netty/1.27.2" />
+        <root url="file://$MAVEN_REPOSITORY$/io/grpc/grpc-core/1.27.2" />
+        <root url="file://$MAVEN_REPOSITORY$/io/grpc/grpc-stub/1.27.2" />
+        <root url="file://$MAVEN_REPOSITORY$/com/sbevision/common-api/1.0.0-SNAPSHOT" />
+        <root url="file://$MAVEN_REPOSITORY$/com/sbevision/interchange-api/1.1.2-SNAPSHOT" />
+      </SOURCES>
       <jarDirectory url="file://$MAGIC_DRAW_INSTALL_DIRECTORY$/lib" recursive="true" />
+      <jarDirectory url="file://$MAVEN_REPOSITORY$/com/nomagic/requirements-api/19.0.2" recursive="false" />
+      <jarDirectory url="file://$MAVEN_REPOSITORY$/com/sbevision/common-api/1.0.0-SNAPSHOT" recursive="false" />
+      <jarDirectory url="file://$MAVEN_REPOSITORY$/com/sbevision/interchange-api/1.1.2-SNAPSHOT" recursive="false" />
       <jarDirectory url="file://$MAVEN_REPOSITORY$/com/teamdev/jxbrowser/jxbrowser-mac/7.1" recursive="false" />
       <jarDirectory url="file://$MAVEN_REPOSITORY$/com/teamdev/jxbrowser/jxbrowser-swing/7.1" recursive="false" />
       <jarDirectory url="file://$MAVEN_REPOSITORY$/com/teamdev/jxbrowser/jxbrowser/7.1" recursive="false" />
+      <jarDirectory url="file://$MAVEN_REPOSITORY$/io/grpc/grpc-api/1.27.2" recursive="false" />
+      <jarDirectory url="file://$MAVEN_REPOSITORY$/io/grpc/grpc-core/1.27.2" recursive="false" />
+      <jarDirectory url="file://$MAVEN_REPOSITORY$/io/grpc/grpc-netty/1.27.2" recursive="false" />
+      <jarDirectory url="file://$MAVEN_REPOSITORY$/io/grpc/grpc-stub/1.27.2" recursive="false" />
+      <jarDirectory url="file://$MAVEN_REPOSITORY$/com/sbevision/common-api/1.0.0-SNAPSHOT" recursive="false" type="SOURCES" />
+      <jarDirectory url="file://$MAVEN_REPOSITORY$/com/sbevision/interchange-api/1.1.2-SNAPSHOT" recursive="false" type="SOURCES" />
+      <jarDirectory url="file://$MAVEN_REPOSITORY$/io/grpc/grpc-api/1.27.2" recursive="false" type="SOURCES" />
+      <jarDirectory url="file://$MAVEN_REPOSITORY$/io/grpc/grpc-core/1.27.2" recursive="false" type="SOURCES" />
+      <jarDirectory url="file://$MAVEN_REPOSITORY$/io/grpc/grpc-netty/1.27.2" recursive="false" type="SOURCES" />
+      <jarDirectory url="file://$MAVEN_REPOSITORY$/io/grpc/grpc-stub/1.27.2" recursive="false" type="SOURCES" />
     </library>
   </component>
 </project>

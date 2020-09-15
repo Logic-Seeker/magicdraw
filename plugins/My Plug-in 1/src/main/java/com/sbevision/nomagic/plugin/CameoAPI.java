@@ -3,8 +3,11 @@ package main.java.com.sbevision.nomagic.plugin;
 import com.nomagic.magicdraw.core.Application;
 import com.nomagic.magicdraw.core.Project;
 import com.nomagic.magicdraw.uml.BaseElement;
+import com.nomagic.magicdraw.uml.Finder;
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Class;
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.*;
+import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Package;
+import com.nomagic.utils.Counter;
 import main.java.com.sbevision.nomagic.msg.enums.TopLevelStereotypes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,13 +19,12 @@ import java.util.List;
 
 public class CameoAPI {
 
-  private static Logger logger = LoggerFactory.getLogger(CameoAPI.class);
+  private final Logger logger = LoggerFactory.getLogger(CameoAPI.class);
 
   private static CameoAPI cameoAPI;
   private Project project;
 
-  private CameoAPI() {
-  }
+  private CameoAPI() {}
 
   public static CameoAPI getInstance() {
     if (cameoAPI == null) {
@@ -31,14 +33,15 @@ public class CameoAPI {
     return cameoAPI;
   }
 
-  public Project getProject() {
+  public void setProject() {
     this.project = Application.getInstance().getProject();
-    return this.project;
+    Counter counter = project.getCounter();
+    counter.setCanResetIDForObject(true);
   }
 
   /* find models */
   public BaseElement findByID(String id) {
-    getProject();
+    setProject();
     logger.debug("Searching for element with ID: '{}'", id);
     if (id == null) {
       logger.error("Could not find element with null id");
@@ -48,61 +51,29 @@ public class CameoAPI {
   }
 
   /* get */
-  public Collection<Element> getAllModels() {
+  public Collection<BaseElement> getAllModels() {
+    setProject();
+    Collection<BaseElement> baseElements = project.getAllElements();
+    Collection<BaseElement> result = new ArrayList<>();
 
-    getProject();
-
-//    Package systemReq =
-//        Finder.byQualifiedName()
-//            .find(project, "1-System Design::1-Concept Level::3-Behavior::Use Cases");
-
-    Collection<Element> result = new ArrayList<>();
-    Collection<Element> resultSpecific = new ArrayList<>();
-//    result = systemReq.getOwnedElement();
-
-    logger.debug("element count :{}", result.size());
-    for (Element element : result) {
-      List<String> stereotypes = getStereotypeList((element));
-//      if (TopLevelStereotypes.contains(stereotypes) || TopLevelStereotypes.contains(element.getHumanType())) {
-//
-//        resultSpecific.add(element);
-//      }
+    for (BaseElement baseElement : baseElements) {
+      if (baseElement instanceof Operation) {
+        // special case, we need the Operation object to be loaded.
+        result.add(baseElement);
+      } else if (baseElement instanceof Element) {
+        List<String> stereotypes = getStereotypeList((Element) baseElement);
+        // TopLevelStereotypes contains list of stereotype. Only those on the list are returned.
+        if (TopLevelStereotypes.contains(stereotypes)) {
+          result.add(baseElement);
+        }
+      }
     }
 
-    //    for (BaseElement baseElement : baseElements) {
-    //      logger.debug("parent name:{}", ((Element) baseElement).getOwner().getHumanName());
-    //      if (((Element) baseElement).getOwner().getHumanName().equals("System Requirements")) {
-    //
-    //        if (baseElement instanceof Operation) {
-    //          // special case, we need the Operation object to be loaded
-    //          result.add(baseElement);
-    //        } else if (baseElement instanceof Element) {
-    //          // for elements, we check if it is a stereotype that we care about before adding it
-    // to out
-    //          // models
-    //
-    //          List<String> stereotypes = getStereotypeList((Element) baseElement);
-    //
-    //          if (TopLevelStereotypes.contains(stereotypes)
-    //              || TopLevelStereotypes.contains(baseElement.getHumanType())) {
-    //            if (logger.isDebugEnabled()) {
-    //              logger.debug(
-    //                  "Stereotypes for {}: {} : {}",
-    //                  baseElement.getHumanName(),
-    //                  baseElement.getHumanType(),
-    //                  stereotypes);
-    //            }
-    //            result.add(baseElement);
-    //          }
-    //        }
-    //      }
-    //    }
-
-    return resultSpecific;
+    return result;
   }
 
   public Collection<DirectedRelationship> getAllOutboundRelationsFromModel(Element model) {
-    getProject();
+    setProject();
     if (model instanceof NamedElement) {
       return model.get_directedRelationshipOfSource();
     } else {
@@ -111,7 +82,7 @@ public class CameoAPI {
   }
 
   public Collection<DirectedRelationship> getAllInboundRelationsFromModel(Element model) {
-    getProject();
+    setProject();
     if (model instanceof NamedElement) {
       return model.get_directedRelationshipOfTarget();
     } else {
@@ -120,7 +91,7 @@ public class CameoAPI {
   }
 
   public Collection<Relationship> getAllNonDirectedRelationsFromModel(Element model) {
-    getProject();
+    setProject();
     Collection<Relationship> result = new ArrayList<>();
     if (model instanceof NamedElement) {
       Collection<Relationship> relationships = model.get_relationshipOfRelatedElement();
@@ -136,7 +107,7 @@ public class CameoAPI {
   }
 
   public Collection<Property> getAllAttributesFromModel(BaseElement model) {
-    getProject();
+    setProject();
     Class modelWithAttributes;
     if (model instanceof Class) {
       modelWithAttributes = (Class) model;
@@ -157,9 +128,7 @@ public class CameoAPI {
 
     InstanceSpecification instanceSpecification = mdElement.getAppliedStereotypeInstance();
     if (instanceSpecification != null) {
-      logger.debug("{} has instanceSpecification", mdElement.getHumanName());
       for (Classifier classifier : instanceSpecification.getClassifier()) {
-        logger.debug(" have classifier name:{}", classifier.getName());
         stereotypes.add(classifier.getName());
       }
     } else {
@@ -207,5 +176,22 @@ public class CameoAPI {
     } catch (Exception e) {
       return "";
     }
+  }
+
+  public Collection<Element> getElementsBasedOnPackageQualifiedName(String packageQualifiedName) {
+    Package systemReq = Finder.byQualifiedName().find(project, packageQualifiedName);
+
+    Collection<Element> ownedElements = systemReq.getOwnedElement();
+    List<Element> result = new ArrayList<>();
+
+    for (Element element : ownedElements) {
+      List<String> stereotypes = getStereotypeList((element));
+      if (TopLevelStereotypes.contains(stereotypes)
+              || TopLevelStereotypes.contains(element.getHumanType())) {
+
+        result.add(element);
+      }
+    }
+    return result;
   }
 }
