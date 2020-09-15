@@ -1,8 +1,8 @@
 package main.java.com.sbevision.nomagic.repository; // package
 // main.java.com.sbevision.nomagic.repository;
 
+import com.google.protobuf.Empty;
 import com.sbevision.interchange.grpc.*;
-import com.teamdev.jxbrowser.deps.com.google.protobuf.Empty;
 import io.grpc.ConnectivityState;
 import io.grpc.ManagedChannel;
 import io.grpc.Metadata;

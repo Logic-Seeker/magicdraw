@@ -191,9 +191,12 @@
         <root url="file://$MAVEN_REPOSITORY$/com/sbevision/common-api/1.0.0-SNAPSHOT" />
         <root url="file://$MAVEN_REPOSITORY$/com/nomagic/requirements-api/19.0.2" />
         <root url="file://$MAVEN_REPOSITORY$/com/sbevision/interchange-api/1.1.2-SNAPSHOT" />
+        <root url="file://$USER_HOME$/gitlab/sbe/interchange-api/target" />
+        <root url="file://$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/3.11.4" />
       </CLASSES>
       <JAVADOC>
         <root url="jar://$MAGIC_DRAW_INSTALL_DIRECTORY$/openapi/docs/javadoc.zip!/" />
+        <root url="file://$USER_HOME$/gitlab/sbe/interchange-api/target/apidocs" />
       </JAVADOC>
       <SOURCES>
         <root url="file://$MAVEN_REPOSITORY$/io/grpc/grpc-api/1.27.2" />
@@ -202,8 +205,14 @@
         <root url="file://$MAVEN_REPOSITORY$/io/grpc/grpc-stub/1.27.2" />
         <root url="file://$MAVEN_REPOSITORY$/com/sbevision/common-api/1.0.0-SNAPSHOT" />
         <root url="file://$MAVEN_REPOSITORY$/com/sbevision/interchange-api/1.1.2-SNAPSHOT" />
+        <root url="file://$USER_HOME$/gitlab/sbe/interchange-api/target" />
+        <root url="file://$USER_HOME$/gitlab/sbe/interchange-api/target/generated-sources/annotations" />
+        <root url="file://$USER_HOME$/gitlab/sbe/interchange-api/target/generated-sources/protobuf/grpc-java" />
+        <root url="file://$USER_HOME$/gitlab/sbe/interchange-api/target/generated-sources/protobuf/java" />
+        <root url="file://$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/3.11.4" />
       </SOURCES>
       <jarDirectory url="file://$MAGIC_DRAW_INSTALL_DIRECTORY$/lib" recursive="true" />
+      <jarDirectory url="file://$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/3.11.4" recursive="false" />
       <jarDirectory url="file://$MAVEN_REPOSITORY$/com/nomagic/requirements-api/19.0.2" recursive="false" />
       <jarDirectory url="file://$MAVEN_REPOSITORY$/com/sbevision/common-api/1.0.0-SNAPSHOT" recursive="false" />
       <jarDirectory url="file://$MAVEN_REPOSITORY$/com/sbevision/interchange-api/1.1.2-SNAPSHOT" recursive="false" />
@@ -214,12 +223,15 @@
       <jarDirectory url="file://$MAVEN_REPOSITORY$/io/grpc/grpc-core/1.27.2" recursive="false" />
       <jarDirectory url="file://$MAVEN_REPOSITORY$/io/grpc/grpc-netty/1.27.2" recursive="false" />
       <jarDirectory url="file://$MAVEN_REPOSITORY$/io/grpc/grpc-stub/1.27.2" recursive="false" />
+      <jarDirectory url="file://$USER_HOME$/gitlab/sbe/interchange-api/target" recursive="false" />
+      <jarDirectory url="file://$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/3.11.4" recursive="false" type="SOURCES" />
       <jarDirectory url="file://$MAVEN_REPOSITORY$/com/sbevision/common-api/1.0.0-SNAPSHOT" recursive="false" type="SOURCES" />
       <jarDirectory url="file://$MAVEN_REPOSITORY$/com/sbevision/interchange-api/1.1.2-SNAPSHOT" recursive="false" type="SOURCES" />
       <jarDirectory url="file://$MAVEN_REPOSITORY$/io/grpc/grpc-api/1.27.2" recursive="false" type="SOURCES" />
       <jarDirectory url="file://$MAVEN_REPOSITORY$/io/grpc/grpc-core/1.27.2" recursive="false" type="SOURCES" />
       <jarDirectory url="file://$MAVEN_REPOSITORY$/io/grpc/grpc-netty/1.27.2" recursive="false" type="SOURCES" />
       <jarDirectory url="file://$MAVEN_REPOSITORY$/io/grpc/grpc-stub/1.27.2" recursive="false" type="SOURCES" />
+      <jarDirectory url="file://$USER_HOME$/gitlab/sbe/interchange-api/target" recursive="false" type="SOURCES" />
     </library>
   </component>
 </project>
